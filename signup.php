@@ -67,7 +67,7 @@ if (get_config(NULL, 'facetoface_addchangemanageremail')) {
 
 $showdiscountcode = ($session->discountcost > 0);
 
-$mform = new mod_facetoface_signup_form(null, compact('s', 'backtoallsessions', 'manageremail', 'showdiscountcode'));
+$mform = new mod_facetoface_signup_form(null, compact('s', 'manageremail', 'showdiscountcode'));
 if ($mform->is_cancelled()){
     redirect($returnurl);
 }
@@ -163,7 +163,8 @@ facetoface_print_session($session, $viewattendees);
 
 if ($signedup) {
     // Cancellation link
-    echo '<a href="'.$CFG->wwwroot.'/mod/facetoface/cancelsignup.php?s='.$session->id.'&amp;backtoallsessions='.$backtoallsessions.'" title="'.get_string('cancelbooking','facetoface').'">'.get_string('cancelbooking', 'facetoface').'</a>';
+    $CFG->wwwroot/course/view.php?id=$course->id
+    echo '<a href="'.$CFG->wwwroot.'/course/view.php?id='.$course->id.'" title="'.get_string('cancelbooking','facetoface').'">'.get_string('cancelbooking', 'facetoface').'</a>';
 
     // See attendees link
     if ($viewattendees) {
