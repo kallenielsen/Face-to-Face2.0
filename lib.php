@@ -675,7 +675,7 @@ function facetoface_email_substitutions($msg, $facetofacename, $reminderperiod, 
             }
             $alldates .= userdate($date->timestart, get_string('strftimedate')).', ';
             $alldates .= userdate($date->timestart, get_string('strftimetime')).
-                ' to '.userdate($date->timefinish, get_string('strftimetime'));
+                ' - '.userdate($date->timefinish, get_string('strftimetime'));
         }
     }
     else {
